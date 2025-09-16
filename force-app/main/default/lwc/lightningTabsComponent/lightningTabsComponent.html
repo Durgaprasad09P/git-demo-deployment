@@ -1,0 +1,112 @@
+<template>
+    <div class="tab-set">
+        <lightning-tabset active-tab-value="tabRelatedRecords">
+            <lightning-tab label="Record Details">
+                <h1>This tab is used to represent the record details.</h1>
+            </lightning-tab>
+
+            <lightning-tab label="Related Records" value="tabRelatedRecords">
+                <div class="container">
+                    <div class="icon">
+                        <lightning-icon 
+                            icon-name="standard:contact_list" 
+                            alternative-text="No Duplicates" 
+                            size="small"
+                            class="custom-icon">
+                        </lightning-icon>
+                    </div>
+                    
+                    <div class="message">
+                        <strong>Contact.</strong>
+                    </div>
+                    <div class="btn">
+                        <lightning-button label="New" variant="brand-outline"></lightning-button>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="icon">
+                        <lightning-icon 
+                            icon-name="standard:opportunity" 
+                            alternative-text="No Duplicates" 
+                            size="small"
+                            class="custom-icon">
+                        </lightning-icon>
+                    </div>
+                    
+                    <div class="message">
+                        <strong>Opportunities 0.</strong>
+                    </div>
+                    <div class="btn">
+                        <lightning-button label="New" variant="brand-outline"></lightning-button>
+                    </div>
+
+                </div>
+                <div class="container">
+                    <div class="icon">
+                        <lightning-icon 
+                            icon-name="standard:case" 
+                            alternative-text="No Duplicates" 
+                            size="small"
+                            class="custom-icon">
+                        </lightning-icon>
+                    </div>
+                    
+                    <div class="message">
+                        <strong>cases 0.</strong>
+                    </div>
+                    <div class="btn">
+                        <lightning-button label="New" variant="brand-outline"></lightning-button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="icon">
+                        <lightning-icon 
+                            icon-name="standard:campaign_members" 
+                            alternative-text="No Duplicates" 
+                            size="small"
+                            class="custom-icon">
+                        </lightning-icon>
+                    </div>
+                    
+                    <div class="message">
+                        <strong>We found no potential duplicates of this Contact.</strong>
+                    </div>
+                    <div class="btn">
+                        <lightning-button label="New Opportunity" variant="brand-outline"></lightning-button>
+                    </div>
+                </div>
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+
+    <div class="tab-set">
+        <lightning-tabset active-tab-value="tabChatter">
+            <lightning-tab label="Activity">
+                <h1>This tab is used to represent activities.</h1>
+            </lightning-tab>
+
+            <lightning-tab label="Chatter" value="tabChatter">
+                <lightning-tabset variant="scoped">
+                    <lightning-tab label="Post" icon-name="action:share_post" class="icon-post">
+                        This tab is used to post a Chatter feed.
+                    </lightning-tab>
+
+                    <lightning-tab label="Poll" icon-name="action:share_poll" class="icon-poll">
+                        This tab is used to represent a poll feed.
+                    </lightning-tab>
+
+                    <lightning-tab label="Question" icon-name="utility:questions_and_answers">
+                        This tab is used to represent queries feed.
+                    </lightning-tab>
+                </lightning-tabset>
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+
+
+
+   
+
+    </div>
+</template>

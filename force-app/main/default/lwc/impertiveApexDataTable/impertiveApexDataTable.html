@@ -1,0 +1,31 @@
+<template>
+  <lightning-card title="Account Reords" icon-name="standard:Account">
+  <div class="slds-var-p-around_small">
+    <lightning-input 
+      type="search"
+      label="Search"
+      placeholder="Search by Account Name"
+      onchange={handleOnChange}
+    ></lightning-input>
+
+    <lightning-button
+      variant="brand"
+      label="Search Account Records"
+      title="Search Account Records"
+      onclick={searchMatchingAccounts}
+      class="slds-m-top_small"
+    ></lightning-button>
+  </div>
+
+  <template if:true={matchingAccountRecords}>
+    <div class="slds-var-p-around_small">
+      <lightning-datatable 
+        data={matchingAccountRecords}
+        columns={accountRecordColumns} 
+        key-field="Id"
+        hide-checkbox-column="true"
+      ></lightning-datatable>
+    </div>
+  </template>
+  </lightning-card>
+</template>

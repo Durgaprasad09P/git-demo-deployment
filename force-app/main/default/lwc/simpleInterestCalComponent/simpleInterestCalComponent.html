@@ -1,0 +1,59 @@
+<template>
+    <div>    <lightning-card title="Calculator" icon-name="utility:tablet_portrait" style="width: 600px;">
+        
+        <lightning-input 
+            label="Enter Product Quantity" 
+            name="ProductQuantity" 
+            type="number" 
+            onchange={handleOnChange}
+            value={productQuantity}>
+        </lightning-input>
+        <br>
+
+        <lightning-input 
+            label="Enter Unit Price" 
+            name="UnitPrice" 
+            type="number" 
+            onchange={handleOnChange}
+            value={unitPrice}>
+        </lightning-input>
+        <br>
+
+        <lightning-input 
+            label="Enter Discount (%)" 
+            name="Discount" 
+            type="number" 
+            onchange={handleOnChange}
+            value={discount}>
+        </lightning-input>
+        <br>
+
+        <lightning-input 
+            label="Total Bill Amount" 
+            value={billAmount} 
+            disabled>
+        </lightning-input>
+        <br>
+
+        <lightning-input 
+            label="Discount Amount" 
+            value={discountAmount} 
+            disabled>
+        </lightning-input>
+        <br>
+
+        <lightning-input 
+            label="Net Bill Amount" 
+            value={netAmount} 
+            disabled>
+        </lightning-input>
+        <br>
+
+        <p class="slds-align_absolute-center">
+            <lightning-button label="Calculate" onclick={calculateBill}></lightning-button>
+        </p>
+
+    </lightning-card>
+</div>
+
+</template>

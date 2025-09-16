@@ -1,0 +1,30 @@
+<template>
+    
+    <div>
+        <b><u><center> Customer Registation Form </center></u></b> <br/>
+            <lightning-input label="Enter Customer Code : " name="lblCustomerCode" placeholder="Customer Code" required="true"></lightning-input>
+            <lightning-input label="Enter First Name : " name="lblFirstName" placeholder="First Name" required="true" min-length="8" max-length="15"></lightning-input>
+            <lightning-input label="Enter Last Name : " name="lblLastName" placeholder="Last Name" required="true" min-length="8" max-length="15" ></lightning-input>
+            <lightning-input label="Enter Customer Age: " type="number" placeholder="Customer Age" required="true" min="20" max="70"></lightning-input>
+            <lightning-input label="Select Birth Date: " type="date" required="true" ></lightning-input>
+            <lightning-input label="Current Employer : " placeholder="Company Name" type="text" min-length="10" max-length="20"></lightning-input>
+            <lightning-input label="Current Designation :" placeholder="Designation" min-length="10"></lightning-input>
+            <lightning-input label="Enter Current CTC : " placeholder="Current CTC" type="currency"></lightning-input>
+            <lightning-input label="Enter Contact Number : " placeholder="Phone Number" type="tel" required="true"></lightning-input>
+            <lightning-input label="Enter Mobile Number : " placeholder="Mobile Number" type="tel"></lightning-input>
+            <lightning-input label="Enter Fax Number : " placeholder="Fax Number" type="tel"></lightning-input>
+            <lightning-input label="Enter Website Name :" placeholder="Website Name" type="url"></lightning-input>
+            <lightning-input label="Enter City Name: " placeholder="City Name" type="text" max-length="20"></lightning-input>
+            <lightning-input label="Enter State Name : " placeholder="State Name" max-length="20"></lightning-input>
+            <lightning-input label="Enter Country Name : " placeholder="Country Name" max-length="20" required="true"></lightning-input>
+            <lightning-input label="Enter Postal Code: " placeholder="Postal Code" required="true"></lightning-input>
+            <lightning-input label="Enter User ID : " placeholder="User ID" required="true" min-length="5" max-length="15"></lightning-input>
+            <lightning-input label="Enter Password : " placeholder="Password" required="true" type="password"></lightning-input>
+            <lightning-input label="Enter Confirm Password: " placeholder="Confirm Password" required="true" type="password"></lightning-input>
+            <lightning-input label="Join our Mailing List :" type="checkbox" title="Select the Checkbox to Join the Mailing List"></lightning-input>
+            <lightning-input label="Select the Profile : " type="file" multiple="true" accept=".doc, .docx, .pdf"></lightning-input>
+            <lightning-input label="Select the Color : " type="color"></lightning-input>
+            <lightning-input label="Select the Review :" type="checkbox-button" checked="true"></lightning-input>
+            <lightning-input label="Send Emails : " type="toggle" checked="true"></lightning-input>
+    </div> 
+</template>

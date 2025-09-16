@@ -1,0 +1,88 @@
+<template>
+    <div>
+        <lightning-tabset active-tab-value="tabChatter">
+           <lightning-tab label="Record Details">
+                <h1> This Tab is used to Represent the Record Detailed Information. </h1>
+           </lightning-tab> 
+
+           <lightning-tab label="Related Records">
+                <h1> This Tab is used to Represent the Related Child Records. </h1>
+           </lightning-tab>
+
+           <lightning-tab label="Chatter" value="tabChatter">
+                <lightning-tabset variant="scoped">
+                    <lightning-tab label="Post" icon-name="action:share_post"> 
+                            <h1> This Tab is used to Post the Required Chatter Feed. </h1>
+                    </lightning-tab>
+
+                    <lightning-tab label="Poll" icon-name="action:share_poll">
+                        <lightning-input label="Question" placeholder="What would you like to ask?"></lightning-input>
+                        <lightning-input label="Choice 1" placeholder="Option 1"></lightning-input>
+                        <lightning-input label="Choice 2" placeholder="Option 2"></lightning-input> <br/>
+                        <p align="center">
+                            <lightning-button label="Submit Choice" variant="brand"></lightning-button>
+                        </p>
+                    </lightning-tab>
+
+                    <lightning-tab label="Question" icon-name="action:question_post_action">
+                        <lightning-input label="Question (Enter up to 255 characters)" placeholder="What would you like to know?" required="true"></lightning-input>
+                        
+                        <lightning-input-rich-text label="Details" placeholder="If you have more to say, Add Details here..."></lightning-input-rich-text>
+                        <br/>
+                        <p align="center">
+                            <lightning-button label="Submit Question" variant="brand"></lightning-button>
+                        </p>
+                    </lightning-tab>
+                </lightning-tabset>
+           </lightning-tab>
+
+           <lightning-tab label="Activities">
+                <lightning-tabset variant="vertical">
+                    <lightning-tab label="New Task" icon-name="action:new_task"> 
+                       <lightning-input label="Enter Task Subject: " ></lightning-input>
+                       <lightning-input label="Enter Task Description: " placeholder="Task Description"></lightning-input>
+                       <lightning-input type="date" label="Activity Date" required="true"></lightning-input>
+                       <br/>
+                       <p align="center">
+                            <lightning-button label="Submit Task" variant="brand"></lightning-button>
+                       </p>
+                    </lightning-tab>
+
+                    <lightning-tab label="New Event" icon-name="action:new_event">
+                        <lightning-input type="Search" label="Subject"></lightning-input>
+                        <table>
+                            <tr>
+                                <td><lightning-input type="date" label="Stard Date" required="true"></lightning-input></td>
+                                <td><lightning-input type="time" label="Start Time" required="true"></lightning-input></td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td><lightning-input type="date" label="End Date" required="true"></lightning-input></td>
+                                <td><lightning-input type="time" label="End Time" required="true"></lightning-input></td>
+                            </tr>
+                        </table>
+                        
+                        <lightning-input type="text" label="Enter Location " required="true"></lightning-input>
+                        <br/>
+                        <p align="center">
+                            <lightning-button label="Submit Event" variant="brand"></lightning-button>
+                        </p>
+                    </lightning-tab>
+
+                    <lightning-tab label="Log a Call" icon-name="action:log_a_call">
+                        <h1> This Tab is used to represent the Log a Call Action. </h1>
+                    </lightning-tab>
+
+                    <lightning-tab label="Send Message" icon-name="action:email">
+                        <h1> This Tab is used to Send an Email Alert. </h1>
+                    </lightning-tab>
+                </lightning-tabset>
+           </lightning-tab>
+
+           <lightning-tab label="News">
+                <h1> This Tab is used to represent the Latest Updated News. </h1>
+           </lightning-tab>
+        </lightning-tabset>
+    </div>
+</template>
