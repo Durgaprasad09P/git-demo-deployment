@@ -1,9 +1,8 @@
-import { LightningElement } from 'lwc';
-
 export default class ParentComponent extends LightningElement {
-  handleReset() {
-    const childComponent = this.template.querySelector('c-child-component');
-    childComponent.resetForm();
-  }
+    handleReset() {
+        const childComponents = this.template.querySelectorAll('c-child-component');
+        childComponents.forEach(child => {
+            child.resetForm(); // call @api method on each child
+        });
+    }
 }
-  
